@@ -27,7 +27,7 @@ How the App work
 ![Login Screen](src/Image/select-user.png "Select User From The List Screen")
 ![Login Screen](src/Image/login-faild.png "Error Screen")
 ## After login the App you can find the users with the count of the questions ansewred and questions they have asked and the navbar has link of New question, questions board and logout button:
-![Home Screen](src/Image/home.png "Home Screen")
+![Home Screen](src/Image/Home.png "Home Screen")
 
 ## You can add new questions as below.
 ![New Question Screen](src/Image/NewQuestion.png "Home Screen")
@@ -47,7 +47,7 @@ How the App work
 * [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
 * [React Router Documentation](http://knowbody.github.io/react-router-docs/)
 * [CircularProgressbar](https://www.npmjs.com/package/react-circular-progressbar)
-(https://stackoverflow.com/questions/29108779/how-to-get-selected-value-of-a-dropdown-menu-in-reactjs)
+* [Select option](https://stackoverflow.com/questions/29108779/how-to-get-selected-value-of-a-dropdown-menu-in-reactjs)
 * [Udacity-Real-World-Redux](https://classroom.udacity.com/nanodegrees/nd019/parts/7dab5516-d1ae-45d3-b8f8-d782b5534caf/modules/ab9d8a1f-ff75-4ba7-a2aa-82cc30383710/lessons/f126db7d-157a-4b30-90de-17bd8b07208b/concepts/9371c8b3-8df8-4fc8-a511-3b21ae438261)
 * [Project Rubric](https://review.udacity.com/#!/rubrics/1567/view)
 
