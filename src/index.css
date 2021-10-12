@@ -1,0 +1,417 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(228, 70, 8);
+}
+
+hr {
+  border: 1px solid rgba(0,0,0,0.5);
+  border-top: 0px solid rgba(0,0,0,0.5);
+}
+h4{
+  font-size: large;
+  color: rgb(241, 71, 59);
+  padding: 4px;
+  margin: 4px;
+  display: inline;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+  color: rgb(255, 253, 253);
+  font-size: 150%;
+  font-style: inherit;
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+.home {
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.home-row {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.29);
+}
+
+.home-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-details {
+  background-color: rgb(7, 14, 14);
+  color: rgb(255, 255, 255);
+}
+
+.loading {
+  background-color: rgba(0,0,0,0.29);
+  height: 5px;
+}
+
+
+.input {
+	margin: 15px auto;
+	padding: 5px;
+	border: 1px solid rgba(0,0,0,0.29);
+	font-size: 12px;
+	width: 200px;
+}
+
+.btn {
+  text-transform: uppercase;
+  margin: 15px auto;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,.29);
+  background: rgb(12, 9, 9);
+  font-size: 12px;
+  width: 125px;
+  position: relative;
+  color: #fcfcfa;
+  padding: 10px;
+  font-size: 1.5em;
+  width: 100%;
+
+}
+
+/* Login style */
+
+.CircularProgressbar-path {
+  stroke: red;
+}
+.select{
+  border: #000;
+  padding: 10px;
+  font-size: 1.2em;
+  width: 100%;
+}
+.user1{
+  background-color: rgb(37, 24, 221);
+}
+.user2{
+  background-color: rgb(33, 20, 210);
+} 
+.user3{
+  background-color: rgb(29, 15, 200);
+}
+
+.btn-login-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-login-group > .btn {
+  margin: 15px 6px;
+  width: 100px;
+}
+
+.btn-login-group  > .btn:hover {
+  border-color: rgb(250, 247, 247);
+  text-decoration: none;
+}
+
+.btn-login-group > .btn:focus {
+  outline: 0;
+  font-weight: 700;
+}
+
+.login {
+	width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-error {
+  margin: 10px;
+  padding: 10px;
+  color: rgb(15, 2, 2);
+  font-size: large;
+  text-align: center;
+  font-weight: 900;
+
+}
+/* ============================== */
+
+/* Nav style */
+
+.nav button:hover {
+  border-color: azure;
+  font-weight: bold;
+  font-size: 30px;
+
+}
+.nav button{
+  font-weight: bold;
+  font-size: 20px;
+  background-color:rgb(241, 71, 59); 
+  color: rgb(255, 255, 255)
+}
+.nav {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(2, 3, 3);
+}
+
+.nav ul {
+  margin: 0 auto;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: crimson;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+.nav li {
+  width: 100%;
+  max-width: 125px;
+  padding: 20px 5px 20px 5px;
+  text-align: center;
+  
+}
+
+.nav li.user-details {
+  margin-left: auto;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.nav hr {
+  margin: 0px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 20px 0px;
+  text-decoration: none;
+
+}
+
+a{
+  color: azure;
+}
+
+/* ============================== */
+
+
+
+/* All button style */
+
+.btn-options{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: black;
+
+}
+
+.btn-list-group {
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-list-group > .btn {
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+
+.btn-list-group > .btn:hover {
+  border-color: rgba(0,0,0,.75);
+  background-color: rgba(0,0,0,0.05);
+  text-decoration: none;
+}
+
+.btn-list-group > .btn:focus {
+  outline: 0;
+}
+/* ==================================== */
+/* User style */
+
+.users-avatar {
+  height: 35px;
+  border-radius: 25px;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.user-details {
+  width: 100%;
+  text-align: center;
+}
+
+.user-avatar {
+  height: 100px;
+  border-radius: 50px;
+  margin: 20px;
+}
+.author-details {
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-state{
+  background-color: rgb(228, 70, 8);
+  width: 100%;
+  max-width: 220px;
+  margin: 20px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-weight: 900;
+  font-size: large;
+}
+
+/* ==================================== */
+
+/* Question style */
+
+.question-details {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.questions-list li:first-child {
+  padding-top: 0px;
+}
+
+.question {
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+  padding: 20px 10px 10px 10px;
+  border: 1px solid rgba(0,0,0,.29);
+  border-radius: 5px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.options > div.option {
+  width: 40%;
+  max-width: 250px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.29);
+  border-radius: 5px;
+}
+
+.options > div.divider {
+  width: 4%;
+  max-width: 70px;
+  padding: 10px;
+}
+
+.details {
+  width: 25%;
+  margin: 0px auto;
+  padding: 20px 10px 5px 10px;
+}
+
+.question-details {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.options-details {
+  width: 100%;
+  max-width: 590px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.options-details > div.option {
+  width: 40%;
+  max-width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid rgba(0,0,0,0.29);
+  border-radius: 5px;
+}
+
+div.option > .btn {
+  width: 40px;
+}
+
+div.option > .btn:hover {
+  border-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.01);
+  text-decoration: none;
+}
+
+.add-new-questions {
+  width: 100%;
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.add-question-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.question{
+  color: rgb(0, 0, 0);
+  background-color: rgb(18, 19, 24);
+}
+
+.option{
+  background-color: rgb(0, 0, 0);
+}
+
