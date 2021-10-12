@@ -6,7 +6,7 @@ import { CircularProgressbar } from "react-circular-progressbar"
 //Handling CircularProgressbar style inside render method
 import "react-circular-progressbar/dist/styles.css"
 
-class QuestionDetails extends Component {
+class QuestionBoard extends Component {
   // Func to make user able to vote
   handleUserVote = (e, qid, answer) => {
     e.preventDefault()
@@ -172,4 +172,4 @@ function mapStateToProps({ users, questions, authUser }, { match }) {
   }
 }
 
-export default connect(mapStateToProps)(QuestionDetails)
+export default connect(mapStateToProps)(QuestionBoard)
