@@ -1,3 +1,5 @@
+ import { saveQuestionAnswer } from '../utils/api'
+
 export const RECEIVE_USERS = 'RECEIVE_USERS'
 export const SAVE_QUESTION = 'SAVE_QUESTION'
 export const ADD_QUESTION = 'ADD_QUESTION_TO_USER'
@@ -11,7 +13,7 @@ export function receiveUsers(users) {
 }
 
 // Save Question Answer Action Creator
-export function saveAns(authUser, qid, answer) {
+export function userAnswer(authUser, qid, answer) {
 	return {
 		type: SAVE_QUESTION,
 		authUser,
@@ -21,10 +23,19 @@ export function saveAns(authUser, qid, answer) {
 }
 
 // Add Question Action Creator
-export function addQut(authUser, qid) {
+export function userAddQut(authUser, qid) {
 	return {
 		type: ADD_QUESTION,
 		authUser,
 		qid
+	}
+}
+
+// Using thunk middleware to save user answer.
+export function handleSaveAnsUs(qid, answer) {
+	return (dispatch, getState) => {
+		const { authUser } = getState()
+		return saveQuestionAnswer({ authedUser: authUser, qid, answer })
+				.then(() => dispatch(userAnswer(authUser, qid, answer)))
 	}
 }

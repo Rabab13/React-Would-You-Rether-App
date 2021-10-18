@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { NavLink } from "react-router-dom"
-import { authUser, userLogout } from "../actions/authUser"
+import {  userLogout } from "../actions/authUser"
 
 class Nav extends Component {
   //func to logout

@@ -1,17 +1,17 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { Redirect } from "react-router-dom"
-import { handleSaveAns } from "../actions/shared"
 import { CircularProgressbar } from "react-circular-progressbar"
 //Handling CircularProgressbar style inside render method
 import "react-circular-progressbar/dist/styles.css"
+import { handleSaveAnsUs } from "../actions/users"
 
-class QuestionDetails extends Component {
+class QuestionBoard extends Component {
   // Func to make user able to vote
   handleUserVote = (e, qid, answer) => {
     e.preventDefault()
     const { dispatch } = this.props
-    dispatch(handleSaveAns(qid, answer))
+    dispatch(handleSaveAnsUs(qid, answer))
   }
 
   //Create question detials UI
@@ -25,11 +25,14 @@ class QuestionDetails extends Component {
       voteTwoSelected,
       optionTwoVotesPercentage,
       authUser,
-    } = this.props
+      } = this.props
 
     // Create CircularProgressbar and changeing each bar size by it's value
     const percentageOne = optionOneVotesPercentage
     const percentageTwo = optionTwoVotesPercentage
+
+    
+
 
     if (!authUser) {
       return (
@@ -41,7 +44,13 @@ class QuestionDetails extends Component {
         />
       )
     }
-
+    // 404 page that will catch all bad routes and one that you can use for
+    //  redirecting users in case the questions id requested by them doesn't exist.
+    if (!question){
+			return (
+					<Redirect to={"/404" } />
+			)
+		}
     return (
       <div className='question-details'>
         <h2 className='center'>Would You Rather...?</h2>
@@ -73,13 +82,12 @@ class QuestionDetails extends Component {
           <div className='options-details'>
             <div className='option'>
               <p className='center'>{question.optionOne.text}</p>
-              <p className='center'>
-                Total Vote: {question.optionOne.votes.length}
-              </p>
+              <p className='center'>Total Votes:{question.optionOne.votes.length}</p>
               <p className='vote-percent'></p>
               <CircularProgressbar
                 value={percentageOne}
-                text={`${optionOneVotesPercentage}%`}
+                // Using toFixed to create rounding off the percentage
+                text={`${(optionOneVotesPercentage* 1).toFixed()}%`}
                 strokeWidth={10}
                 background
                 backgroundPadding={0}
@@ -95,20 +103,21 @@ class QuestionDetails extends Component {
                   },
                 }}
               />
+                {/* <div>{voteOneSelected} out of {totalVotes} votes</div> */}
+            
               ;
               {
                 // Used to show which question did user selected
-                voteOneSelected && <p className='center'>Your Selection</p>
+                 voteOneSelected && <p className='center'>Your Selection</p>
               }
             </div>
             <div className='option'>
               <p className='center'>{question.optionTwo.text}</p>
-              <p className='center'>
-                Total Vote: {question.optionTwo.votes.length}
-              </p>
+              <p className='center'>Total Votes:{question.optionTwo.votes.length}</p>
               <CircularProgressbar
                 value={percentageTwo}
-                text={`${optionTwoVotesPercentage}%`}
+                // Using toFixed to create rounding off the percentage
+                text={`${(optionTwoVotesPercentage* 1).toFixed()}%`}
                 strokeWidth={10}
                 background
                 backgroundPadding={0}
@@ -123,7 +132,8 @@ class QuestionDetails extends Component {
                   },
                 }}
               />
-              ;{voteTwoSelected && <p className='center'>Your Selection</p>}
+              {/* <div>{voteOneSelected} out of {totalVotes} votes</div> */}
+              ;{voteOneSelected &&  <p className='center'>Your Selection</p>}
             </div>
           </div>
         )}
@@ -159,6 +169,9 @@ function mapStateToProps({ users, questions, authUser }, { match }) {
     : null
   const author = question ? users[question.author] : null
 
+
+  
+
   return {
     id,
     authUser,
@@ -169,7 +182,7 @@ function mapStateToProps({ users, questions, authUser }, { match }) {
     authorImage,
     voteTwoSelected,
     voteOneSelected,
-  }
+    }
 }
 
-export default connect(mapStateToProps)(QuestionDetails)
+export default connect(mapStateToProps)(QuestionBoard)

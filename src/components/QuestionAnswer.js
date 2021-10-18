@@ -3,7 +3,8 @@ import { connect } from "react-redux"
 import { Redirect } from "react-router-dom"
 import Question from "./Question"
 
-class QuestionList extends Component {
+//Create question board Component
+class QuestionAnswer extends Component {
   state = {
     voted: false,
   }
@@ -90,4 +91,4 @@ function mapStateToProps({ questions,id, users, authUser }) {
   }
 }
 
-export default connect(mapStateToProps)(QuestionList)
+export default connect(mapStateToProps)(QuestionAnswer)

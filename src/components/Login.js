@@ -1,7 +1,10 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Redirect } from "react-router-dom"
+import { Redirect, } from "react-router-dom"
 import { authUser } from "../actions/authUser"
+
+
+
 
 class Login extends Component {
   state = {
@@ -11,6 +14,7 @@ class Login extends Component {
     userID: "",
     // condtion to login must select from list before click login btn
     selectFromList: false,
+    redirectToReferrer: false
   }
 
   // handle change between uesrs in order to login the app
@@ -35,16 +39,17 @@ class Login extends Component {
       this.setState({
         userId: "",
         selectFromList: true,
+        // redirectToReferrer: true
       })
     }
   }
 
   render() {
-    const { userId, userID } = this.state
-
+    const { userId, userID, } = this.state
+   
     if (this.props.authUser) {
-      return <Redirect to={"/home/" + userID} />
-    }
+      return <Redirect to={"/" + userID} />
+     }
 
     return (
       <div className='login'>
@@ -69,7 +74,11 @@ class Login extends Component {
             <p className='login-error'>Please Select From The above List!</p>
           )}
           <div className='btn-login-group'>
-            <button className='btn' type='submit'>
+          {/* {this.state.redirectToReferrer && */}
+           <p className='login-error'>
+          You must login to view the page</p>
+          {/* )} */}
+            <button className='btn'  type='submit' onClick={this.login}>
               Login
             </button>
           </div>
@@ -78,6 +87,7 @@ class Login extends Component {
     )
   }
 }
+
 
 // Map the selectedUser to the Component props
 function mapStateToProps({ users, authUser }) {
