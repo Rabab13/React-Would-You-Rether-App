@@ -3,7 +3,7 @@ import { showLoading, hideLoading } from 'react-redux-loading'
 import { getInitialData} from '../utils/api'
 // import our app actions creator
 import { userAddQut,receiveUsers, userAnswer, handleSaveAnsUs } from './users'
-import { receiveQut, handleAddNQut , handleSaveAnsQut} from './questions'
+import { receiveQut, handleAddNQut } from './questions'
 
 export function handleInitialData() {
 	return (dispatch) => {
