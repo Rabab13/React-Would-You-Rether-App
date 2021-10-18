@@ -3,11 +3,7 @@ import { connect } from "react-redux"
 import { Redirect } from "react-router-dom"
 import Question from "./Question"
 
-<<<<<<< HEAD
 //Create question board Component
-=======
-//Create quetion board Copmonent
->>>>>>> 11d8500b3d27d4048b12ac24adbc29ba96dca89d
 class QuestionAnswer extends Component {
   state = {
     voted: false,

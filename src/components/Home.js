@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     if (!this.props.authUser) {
       return (
-        <Redirect to={{ path: "/login", state: { returnPath: "/home" } }} />
+        <Redirect to={{ path: "/login", state: { returnPath: "/leaderboard" } }} />
       )
     }
 
